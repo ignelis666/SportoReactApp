@@ -8,44 +8,11 @@ import Pratimai from './src/Components/PratimaiJSON.js';
 import PratimuKrScreen from './Screens/PratimuKrScreen';
 import PratimuKoScreen from './Screens/PratimuKoScreen';
 import HomeScreen from './Screens/HomeScreen';
+import KardioScreen from './Screens/KardioScreen';
+import PratimuPeScreen from './Screens/PratimuPeScreen';
+import PratimuNuScreen from './Screens/PratimaiNuScreen';
 
-class PratimuPeScreen extends React.Component {
-  static navigationOptions = {
-    title : 'Pratimai pečiams'
-  };
-  render() {
-    return (
-      <View>
-        <Text>Pratimai pečiams </Text>
-        </View>
-    );
-  }
-}
-class PratimuNuScreen extends React.Component {
-  static navigationOptions = {
-    title : 'Pratimai nugarai'
-  };
-  render() {
-    return (
-      <View>
-        <Text>Pratimai nugarai </Text>
-        </View>
-    );
-  }
-}
-class KardioScreen extends React.Component {
-  static navigationOptions = {
-    title : 'Kardio pratimai'
-  };
-  render() {
-    return (
-      <View>
 
-        <Text>Kardio pratimai </Text>
-        </View>
-    );
-  }
-}
 
 const SimpleApp = StackNavigator({
   Home: { screen: HomeScreen },
@@ -58,13 +25,9 @@ const SimpleApp = StackNavigator({
 
 export default class App extends React.Component {
   render() {
-    return (
-      
-<SimpleApp />
-    
-      
-    )
-    
+    return (     
+<SimpleApp />     
+          )  
   }
 }
 
