@@ -1,9 +1,7 @@
 import React from 'react';
-import {AppRegistry,StyleSheet, Text,TouchableHighlight, Image,View } from 'react-native';
+import {StyleSheet, Text,TouchableHighlight, Image,View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { ScrollView } from 'react-native';
-import PratimDetail from './src/Components/PratimDetail';
-import Button from './src/Components/Button';
 import Pratimai from './src/Components/PratimaiJSON.js';
 import PratimuKrScreen from './Screens/PratimuKrScreen';
 import PratimuKoScreen from './Screens/PratimuKoScreen';
@@ -14,7 +12,7 @@ import PratimuNuScreen from './Screens/PratimaiNuScreen';
 
 
 
-const SimpleApp = StackNavigator({
+const ManoScreenai = StackNavigator({
   Home: { screen: HomeScreen },
   PratimaiKr : {screen: PratimuKrScreen},
   PratimaiKo : {screen: PratimuKoScreen},
@@ -26,7 +24,7 @@ const SimpleApp = StackNavigator({
 export default class App extends React.Component {
   render() {
     return (     
-<SimpleApp />     
+<ManoScreenai />     
           )  
   }
 }

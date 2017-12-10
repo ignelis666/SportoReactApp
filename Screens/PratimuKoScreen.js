@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text,View } from 'react-native';
-import PratimaiJSON from '../src/Components/PratimaiJSON.js';
+import KojomJSON from '../src/Components/KojomJSON.js';
 
   export default class PratimuKoScreen extends React.Component {
     static navigationOptions = {
@@ -10,9 +10,9 @@ import PratimaiJSON from '../src/Components/PratimaiJSON.js';
       return (
         <View
           style={{flex:1}}>
-          <Text>Pratimai kojom listas </Text>
-          <PratimaiJSON />
-          {/* <PratimaiJSON /> */}
+          
+          <KojomJSON />
+          
           </View>
       );
       

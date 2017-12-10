@@ -18,7 +18,7 @@ export default class Pratimai extends Component {
   }
 
   componentDidMount() {
-    return fetch('https://api.myjson.com/bins/tz4if.json')
+    return fetch('https://api.myjson.com/bins/abmlr.json')
       .then((response) => response.json())
       .then((responseJson) => {
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});

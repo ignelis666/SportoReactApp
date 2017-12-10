@@ -18,7 +18,7 @@ export default class Pratimai extends Component {
   }
 
   componentDidMount() {
-    return fetch('https://api.myjson.com/bins/tz4if.json')
+    return fetch('https://api.myjson.com/bins/1ezj7z.json')
       .then((response) => response.json())
       .then((responseJson) => {
         let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -64,11 +64,8 @@ export default class Pratimai extends Component {
           <View style={{flex:1,flexDirection: 'column'}} >
           <TouchableOpacity onPress={this.GetItem.bind(this, rowData.Aprasymas)}>
           <Text style={[styles.textViewContainer]} >{ rowData.PratimoName }</Text>
-          <Text style={styles.textViewContainer} >{'Priejimai :'+ rowData.Priejimai }</Text>
-         
+          <Text style={styles.textViewContainer} >{'Priejimai :'+ rowData.Priejimai }</Text>        
           <Image source = {{ uri: rowData.image}} style={styles.Imidzas}/>
-
-        
           </TouchableOpacity>
           </View>
 
@@ -86,8 +83,6 @@ MainContainer :{
   margin: 5,
   paddingTop: (Platform.OS === 'android') ? 20 : 0,
   backgroundColor: '#1874CD'
-   
-
 },
 
  
@@ -96,17 +91,12 @@ textViewContainer: {
  textAlign:'center', 
  padding:10,
  fontSize: 20,
- color: '#fff',
- 
+ color: '#fff', 
 },
 
 Imidzas:{
-
   width: 400,
   height: 250 ,
-  alignItems: 'center',
-   
+  alignItems: 'center',  
   }
-   
- 
 });

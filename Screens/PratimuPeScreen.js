@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text,View } from 'react-native';
-import PratimaiJSON from '../src/Components/PratimaiJSON.js';
+import PeciamJSON from '../src/Components/PeciamJSON.js';
 
   export default class PratimuPeScreen extends React.Component {
     static navigationOptions = {
@@ -10,9 +10,9 @@ import PratimaiJSON from '../src/Components/PratimaiJSON.js';
       return (
         <View
           style={{flex:1}}>
-          <Text>Cia atvaizduojam peciam </Text>
-          <PratimaiJSON />
-          {/* <PratimaiJSON /> */}
+         
+          <PeciamJSON />
+        
           </View>
       );
       

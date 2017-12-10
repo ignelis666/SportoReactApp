@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text,View } from 'react-native';
-import PratimaiJSON from '../src/Components/PratimaiJSON.js';
+import KardioJSON from '../src/Components/KardioJSON.js';
 
   export default class KardioScreen extends React.Component {
     static navigationOptions = {
@@ -10,9 +10,9 @@ import PratimaiJSON from '../src/Components/PratimaiJSON.js';
       return (
         <View
           style={{flex:1}}>
-          <Text>Kardio pratimai </Text>
-          <PratimaiJSON />
-          {/* <PratimaiJSON /> */}
+          
+          <KardioJSON />
+          
           </View>
       );
       

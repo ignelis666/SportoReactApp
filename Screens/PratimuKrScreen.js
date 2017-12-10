@@ -10,9 +10,9 @@ import PratimaiJSON from '../src/Components/PratimaiJSON.js';
       return (
         <View
           style={{flex:1}}>
-          <Text>Slapias ir be tapkiu </Text>
+          
           <PratimaiJSON />
-          {/* <PratimaiJSON /> */}
+         
           </View>
       );
       
