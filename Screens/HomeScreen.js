@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text,View,TouchableHighlight,Image } from 'react-native';
+import { Text,View,TouchableHighlight,Image,ListView } from 'react-native';
 import PratimaiJSON from '../src/Components/PratimaiJSON.js';
 
 export default class App extends React.Component {
@@ -47,11 +47,13 @@ export default class App extends React.Component {
       />
 </TouchableHighlight>
   
+<ListView
+              dataSource={this.state.dataSource}
+              renderRow={(rowData) => <Text>{rowData}</Text>}
+            />
+
   </View>
   );
 }
 }
         
-      
-      
-  

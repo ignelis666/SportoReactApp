@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ActivityIndicator, ListView, Text, View } from 'react-native';
+import { ActivityIndicator, ListView, Text, View , TouchableOpacity,Alert} from 'react-native';
 
 export default class Pratimai extends Component {
   constructor(props) {
@@ -26,6 +26,18 @@ export default class Pratimai extends Component {
       });
   }
 
+  ListViewas = () => {
+    return (
+      <View 
+      style={{
+        height: .5,
+        width: "100%",
+        backgroundColor: "#000",
+      }}
+      />
+    );
+  }
+
   render() {
     if (this.state.isLoading) {
       return (
@@ -36,12 +48,45 @@ export default class Pratimai extends Component {
     }
 
     return (
-      <View style={{flex: 1, paddingTop: 20}}>
+      <View style={styles.MainContainer}>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text>{rowData.PratimoName},Priejimai {rowData.Priejimai}</Text>}
+          renderSeparator={this.ListViewas}
+          renderRow={(rowData) =>
+          <View style={{flex:1,flexDirection: 'column'}} >
+          <TouchableOpacity onPress={this.GetItem.bind(this, rowData.PratimoName)}>
+          <Text style={styles.textViewContainer} >{'Pavadinimas '+ rowData.PratimoName }</Text>
+          <Text style={styles.textViewContainer} >{'Priejimai '+ rowData.Priejimai }</Text>
+          </TouchableOpacity>
+          </View>
+
+          }
+        //  renderRow={(rowData) => <Text>{rowData.PratimoName},Priejimai {rowData.Priejimai}</Text>}
         />
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+ 
+MainContainer :{
+ 
+// Setting up View inside content in Vertically center.
+justifyContent: 'center',
+flex:1,
+paddingTop: (Platform.OS === 'android') ? 20 : 0,
+backgroundColor: '#00BCD4',
+padding: 5,
+ 
+},
+ 
+textViewContainer: {
+ 
+ textAlignVertical:'center', 
+ padding:10,
+ fontSize: 20,
+ color: '#fff',
+ 
+}
+ 
+});
